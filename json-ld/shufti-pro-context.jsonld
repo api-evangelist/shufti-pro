@@ -1,0 +1,163 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "schema": "https://schema.org/",
+    "sp": "https://shuftipro.com/vocab/",
+
+    "VerificationRequest": "sp:VerificationRequest",
+    "VerificationResponse": "sp:VerificationResponse",
+    "DocumentVerification": "sp:DocumentVerification",
+    "FaceVerification": "sp:FaceVerification",
+    "AddressVerification": "sp:AddressVerification",
+    "AMLScreening": "sp:AMLScreening",
+    "KYBVerification": "sp:KYBVerification",
+    "BiometricAuth": "sp:BiometricAuth",
+    "LivenessDetection": "sp:LivenessDetection",
+    "VideoIdent": "sp:VideoIdent",
+    "eSignature": "sp:eSignature",
+
+    "reference": {
+      "@id": "sp:reference",
+      "@type": "xsd:string"
+    },
+    "country": {
+      "@id": "sp:country",
+      "@type": "xsd:string"
+    },
+    "language": {
+      "@id": "sp:language",
+      "@type": "xsd:string"
+    },
+    "document_type": {
+      "@id": "sp:documentType",
+      "@type": "xsd:string"
+    },
+    "verification_mode": {
+      "@id": "sp:verificationMode",
+      "@type": "xsd:string"
+    },
+    "callback_url": {
+      "@id": "sp:callbackUrl",
+      "@type": "@id"
+    },
+    "redirect_url": {
+      "@id": "sp:redirectUrl",
+      "@type": "@id"
+    },
+    "allow_retry": {
+      "@id": "sp:allowRetry",
+      "@type": "xsd:boolean"
+    },
+    "show_results": {
+      "@id": "sp:showResults",
+      "@type": "xsd:boolean"
+    },
+    "event": {
+      "@id": "sp:event",
+      "@type": "xsd:string"
+    },
+    "verification_url": {
+      "@id": "sp:verificationUrl",
+      "@type": "@id"
+    },
+    "verification_result": {
+      "@id": "sp:verificationResult",
+      "@type": "xsd:string"
+    },
+    "declined_reason": {
+      "@id": "sp:declinedReason",
+      "@type": "xsd:string"
+    },
+    "access_token": {
+      "@id": "sp:accessToken",
+      "@type": "xsd:string"
+    },
+    "proofs": {
+      "@id": "sp:proofs",
+      "@type": "@id"
+    },
+    "watchlists": {
+      "@id": "sp:watchlists",
+      "@type": "xsd:string"
+    },
+    "business_name": {
+      "@id": "sp:businessName",
+      "@type": "xsd:string"
+    },
+    "registration_number": {
+      "@id": "sp:registrationNumber",
+      "@type": "xsd:string"
+    },
+    "incorporation_country": {
+      "@id": "sp:incorporationCountry",
+      "@type": "xsd:string"
+    },
+    "face": {
+      "@id": "sp:face",
+      "@type": "@json"
+    },
+    "document": {
+      "@id": "sp:document",
+      "@type": "@json"
+    },
+    "address": {
+      "@id": "sp:address",
+      "@type": "@json"
+    },
+    "background_checks": {
+      "@id": "sp:backgroundChecks",
+      "@type": "@json"
+    },
+    "phone": {
+      "@id": "sp:phone",
+      "@type": "@json"
+    },
+    "email": {
+      "@id": "sp:email",
+      "@type": "@json"
+    },
+
+    "provider": "sp:provider",
+    "baseUrl": {
+      "@id": "sp:baseUrl",
+      "@type": "@id"
+    },
+    "authMethod": "sp:authMethod",
+    "supportedCountries": "sp:supportedCountries",
+    "supportedDocumentTypes": "sp:supportedDocumentTypes",
+    "amlWatchlistCount": {
+      "@id": "sp:amlWatchlistCount",
+      "@type": "xsd:integer"
+    },
+
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": "schema:url"
+  },
+  "@graph": [
+    {
+      "@id": "https://shuftipro.com/",
+      "@type": "schema:Organization",
+      "schema:name": "Shufti Pro",
+      "schema:description": "AI-powered identity verification platform offering KYC, AML, KYB, biometrics, and document verification services via REST API.",
+      "schema:url": "https://shuftipro.com/",
+      "schema:sameAs": [
+        "https://developers.shuftipro.com/",
+        "https://github.com/shuftipro",
+        "https://www.linkedin.com/company/shufti-pro",
+        "https://x.com/shufti_pro"
+      ]
+    },
+    {
+      "@id": "https://api.shuftipro.com/",
+      "@type": "sp:APIProvider",
+      "provider": "Shufti Pro",
+      "baseUrl": "https://api.shuftipro.com",
+      "authMethod": "Basic Authentication (Client ID + Secret Key) or Bearer Token (access_token)",
+      "supportedCountries": "230+",
+      "supportedDocumentTypes": "10000+",
+      "amlWatchlistCount": 1700
+    }
+  ]
+}
