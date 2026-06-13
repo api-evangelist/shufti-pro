@@ -1,0 +1,64 @@
+name: Shufti Pro Rate Limits
+description: >-
+  Shufti Pro does not publish explicit API rate limit thresholds in its public
+  developer documentation. Rate limits are enforced at the account and plan
+  level, with the Free Forever plan capped at 10 verifications per month.
+  Enterprise customers negotiate volume and throughput limits as part of their
+  custom SLA agreements. The API uses asynchronous callback patterns to
+  accommodate verification processing time.
+version: "0.1"
+url: https://developers.shuftipro.com/docs/get_started/
+limits:
+  - name: Free Plan Monthly Cap
+    description: >-
+      Free Forever plan accounts are limited to 10 verification checks per
+      calendar month across all verification services.
+    scope: account
+    period: monthly
+    limit: 10
+    unit: verifications
+    tier: Free Forever
+
+  - name: Essentials Plan Volume Cap
+    description: >-
+      Essentials plan accounts support up to 20,000 verifications. Customers
+      exceeding this threshold should contact Shufti Pro to upgrade to the
+      Enterprise plan for continued access.
+    scope: account
+    period: annual
+    limit: 20000
+    unit: verifications
+    tier: Essentials
+
+  - name: Questionnaires Per Request
+    description: >-
+      Each API verification request supports a maximum of 5 questionnaires
+      per call. This is a hard limit enforced at the request level.
+    scope: request
+    period: per-request
+    limit: 5
+    unit: questionnaires
+    tier: All
+
+  - name: Enterprise Custom Limits
+    description: >-
+      Enterprise plan customers receive custom rate limit and throughput
+      agreements negotiated with the Shufti Pro sales team based on expected
+      verification volume and use case requirements.
+    scope: account
+    period: custom
+    limit: custom
+    unit: verifications
+    tier: Enterprise
+
+notes:
+  - >-
+    Shufti Pro's REST API uses asynchronous processing with server-to-server
+    callbacks. Verification results are delivered via callback URL or
+    retrievable via the status endpoint (api.shuftipro.com/status) rather
+    than synchronously in the API response, which mitigates throughput
+    pressure for integrations with high burst needs.
+  - >-
+    No HTTP rate limit headers (e.g., X-RateLimit-Limit, X-RateLimit-Remaining,
+    Retry-After) are documented in public API references. Enterprise SLA terms
+    govern uptime, API availability, and support response times.

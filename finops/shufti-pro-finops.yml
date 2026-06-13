@@ -1,0 +1,121 @@
+name: Shufti Pro FinOps Framework
+description: >-
+  FinOps cost management guidance for teams consuming the Shufti Pro identity
+  verification API. Shufti Pro uses a consumption-based pricing model charged
+  per verification check, making cost visibility and optimization essential
+  for teams managing KYC/AML compliance workflows at scale.
+version: "1.0"
+framework: FinOps Framework 1.0
+url: https://shuftipro.com/plans/
+currency: USD
+
+model:
+  type: consumption
+  description: >-
+    Shufti Pro charges per verification check. Each call to the verification
+    API that triggers an identity, document, biometric, AML, or business
+    verification check incurs a charge. The Free tier provides 10 free checks
+    per month; the Essentials tier charges $0.95 per check up to 20,000 checks;
+    Enterprise tiers negotiate custom per-check rates based on volume.
+  unit: per check
+  tiers:
+    - name: Free Forever
+      price: 0.00
+      limit: 10 verifications/month
+    - name: Essentials
+      price: 0.95
+      limit: 20,000 verifications
+    - name: Enterprise
+      price: custom
+      limit: unlimited (negotiated)
+
+inform:
+  description: >-
+    Visibility into Shufti Pro API consumption supports accurate cost
+    attribution across business units, products, and compliance workflows.
+  practices:
+    - name: Check-Level Cost Tagging
+      description: >-
+        Use the Shufti Pro back-office dashboard to review verification
+        history and associate checks with internal cost centers, products,
+        or customer segments. Tag API calls with reference IDs to reconcile
+        usage against internal records.
+    - name: Monthly Usage Reporting
+      description: >-
+        Monitor monthly check consumption against plan limits. Essentials
+        plan customers should track cumulative usage to avoid unexpected
+        overage or service interruption at the 20,000-check threshold.
+    - name: Verification Type Breakdown
+      description: >-
+        Different verification service types (document, biometrics, AML,
+        KYB) may carry different costs at Enterprise tier. Track usage by
+        service type to identify the primary cost drivers.
+
+optimize:
+  description: >-
+    Reduce unnecessary API spend by controlling when and how verification
+    checks are triggered in integration workflows.
+  practices:
+    - name: Fast ID Reusability
+      description: >-
+        Use Shufti Pro's Fast ID reusability feature to avoid re-verifying
+        returning customers who have already completed verification. This
+        eliminates redundant checks for repeat users.
+    - name: Retry Gate Control
+      description: >-
+        The allow_retry parameter (set to "1") enables end-users to
+        re-upload documents if initial submission fails. Implement
+        client-side document quality checks before initiating API calls
+        to reduce failed verifications that still consume credits.
+    - name: Asynchronous Mode Selection
+      description: >-
+        Use show_results: "0" for asynchronous verification to avoid
+        polling overhead and reduce unnecessary status endpoint calls.
+        Register a callback URL to receive results without repeated
+        API requests.
+    - name: Verification Mode Targeting
+      description: >-
+        Select the appropriate verification_mode (image_only, video_only,
+        or any) for each use case. Avoid defaulting to video verification
+        for all checks when image_only suffices, as video checks may
+        require human review adding latency and cost.
+    - name: Right-Size Service Selection
+      description: >-
+        Only invoke the verification services required for each use case.
+        Bundling unnecessary services (e.g., adding AML screening to
+        low-risk user flows) increases cost per verification without
+        compliance benefit.
+
+operate:
+  description: >-
+    Operational practices for managing Shufti Pro API costs in production
+    environments sustainably.
+  practices:
+    - name: Budget Threshold Alerts
+      description: >-
+        Set internal budget alerts when cumulative monthly verification
+        spend approaches 80% and 100% of budget targets. Shufti Pro does
+        not natively provide budget alerts; implement these in your finance
+        or infrastructure tooling.
+    - name: Plan Upgrade Planning
+      description: >-
+        Track monthly verification trajectory against the Essentials plan
+        20,000-check cap. Engage Shufti Pro's sales team proactively to
+        negotiate Enterprise pricing before hitting the cap to avoid
+        service disruption.
+    - name: Sandbox vs Production Separation
+      description: >-
+        Use Shufti Pro's test/sandbox environment for development and QA
+        to prevent development activity from consuming production
+        verification credits.
+    - name: Callback Reliability Monitoring
+      description: >-
+        Monitor callback URL health and retry logic. Failed callbacks that
+        require repeated status polling to retrieve results can inflate
+        API call counts and associated costs at Enterprise tier.
+    - name: SLA Cost Recovery
+      description: >-
+        Enterprise SLAs cover platform uptime and API availability.
+        Track SLA compliance and exercise credit or recovery clauses
+        in the event of availability failures that caused verification
+        failures and associated re-processing costs.

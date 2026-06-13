@@ -1,0 +1,80 @@
+name: Shufti Pro Plans and Pricing
+description: >-
+  Shufti Pro offers three pricing tiers for its identity verification platform.
+  Plans range from a free tier for evaluation to per-check pricing for growing
+  businesses to custom enterprise contracts for high-volume deployments.
+  Pricing is consumption-based, charged per verification check.
+version: "0.1"
+url: https://shuftipro.com/plans/
+plans:
+  - name: Free Forever
+    description: >-
+      Entry-level free plan for evaluation and low-volume testing. Provides
+      access to core verification services with no credit card required.
+      Limited to 10 verifications per month.
+    url: https://shuftipro.com/plans/
+    price: 0.00
+    currency: USD
+    billingCycle: monthly
+    unit: per check
+    features:
+      - Up to 10 verifications per month
+      - No credit card required
+      - Access to core identity verification services
+      - Document verification
+      - Facial biometrics
+      - AML screening
+      - Address verification
+      - 230+ countries and territories
+      - 10,000+ document types
+
+  - name: Essentials
+    description: >-
+      Pay-per-check plan for startups and growing businesses needing scalable
+      identity verification. Supports up to 20,000 verifications with simple
+      per-check pricing and access to the full service catalog.
+    url: https://shuftipro.com/plans/
+    price: 0.95
+    currency: USD
+    billingCycle: per-use
+    unit: per check
+    features:
+      - Up to 20,000 verifications
+      - $0.95 per check
+      - Document verification (10,000+ types, 230+ countries)
+      - Facial biometrics with liveness detection
+      - AML screening (1700+ watchlists)
+      - Address verification (240+ countries)
+      - Age verification
+      - Phone and email multi-factor authentication
+      - Know Your Business (KYB)
+      - Know Your Investor (KYI)
+      - E-signature capability
+      - Fast ID reusability
+      - Support for 150+ languages
+      - Mobile SDKs (Android, iOS, Flutter, React Native)
+      - Server-to-server callback notifications
+      - PDF verification reports
+
+  - name: Enterprise
+    description: >-
+      Custom pricing plan for high-volume enterprise deployments. Includes
+      full access to Shufti Pro's global technology stack, dedicated support,
+      and custom SLA agreements. Requires direct engagement with the sales team.
+    url: https://shuftipro.com/plans/
+    price: custom
+    currency: USD
+    billingCycle: custom
+    unit: per check (negotiated)
+    features:
+      - Custom per-check pricing for high volume
+      - Full access to Shufti's All-in-house Global Tech Stack
+      - Dedicated sales and support team
+      - Custom SLA agreements (platform uptime, API availability)
+      - All Essentials plan features
+      - VideoIdent (expert-conducted video interviews)
+      - Business AML screening
+      - Enhanced address verification
+      - Priority support
+      - Custom integration support
+      - Onboarding assistance

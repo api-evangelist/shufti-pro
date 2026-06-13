@@ -1,0 +1,147 @@
+aid: shufti-pro
+name: Shufti Pro
+description: >-
+  Shufti Pro is an AI-powered identity verification platform offering a REST
+  API for document verification, face biometrics, AML screening, business
+  verification (KYB), and address verification. The platform supports 10,000+
+  document types across 230+ countries and territories, integrates with 1700+
+  AML watchlists, and provides mobile SDKs for Android, iOS, Flutter, and
+  React Native.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/shufti-pro/refs/heads/main/apis.yml
+created: "2026-06-13"
+modified: "2026-06-13"
+specificationVersion: "0.19"
+tags:
+  - Identity Verification
+  - KYC
+  - AML
+  - KYB
+  - Face Biometrics
+  - Document Verification
+  - Address Verification
+  - Liveness Detection
+  - eIDV
+  - Compliance
+  - Fraud Prevention
+apis:
+  - aid: shufti-pro:verification-api
+    name: Shufti Pro Verification API
+    description: >-
+      REST API for end-to-end identity verification including document
+      verification, facial biometrics with liveness detection, address
+      verification, AML screening against 1700+ watchlists, phone and email
+      MFA, VideoIdent, and electronic signatures. Supports both onsite and
+      offsite verification modes with server-to-server callback notifications.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://developers.shuftipro.com/docs/get_started/
+    baseURL: https://api.shuftipro.com
+    tags:
+      - Identity Verification
+      - KYC
+      - AML
+      - Document Verification
+      - Face Biometrics
+    properties:
+      - type: Documentation
+        url: https://developers.shuftipro.com/docs/get_started/
+      - type: Authentication
+        url: https://developers.shuftipro.com/docs/verification_endpoints/requests/
+    contact:
+      - FN: Shufti Pro Support
+        url: https://support.shuftipro.com/
+
+  - aid: shufti-pro:kyb-api
+    name: Shufti Pro KYB API
+    description: >-
+      Business verification API providing Know Your Business (KYB) checks from
+      official registries, business AML screening, and Know Your Investor (KYI)
+      services. Enables companies to verify business entities and their
+      beneficial owners for compliance and onboarding purposes.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://developers.shuftipro.com/docs/get_started/
+    baseURL: https://api.shuftipro.com
+    tags:
+      - KYB
+      - Business Verification
+      - AML
+      - Compliance
+    properties:
+      - type: Documentation
+        url: https://developers.shuftipro.com/docs/get_started/
+    contact:
+      - FN: Shufti Pro Support
+        url: https://support.shuftipro.com/
+
+  - aid: shufti-pro:aml-screening-api
+    name: Shufti Pro AML Screening API
+    description: >-
+      Anti-money laundering screening API covering 1700+ global watchlists,
+      sanctions lists, PEP databases, and adverse media sources. Provides
+      ongoing monitoring and batch screening for individuals and businesses
+      to support regulatory compliance requirements.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://developers.shuftipro.com/docs/get_started/
+    baseURL: https://api.shuftipro.com
+    tags:
+      - AML
+      - Sanctions Screening
+      - PEP
+      - Compliance
+    properties:
+      - type: Documentation
+        url: https://developers.shuftipro.com/docs/get_started/
+    contact:
+      - FN: Shufti Pro Support
+        url: https://support.shuftipro.com/
+
+  - aid: shufti-pro:biometric-auth-api
+    name: Shufti Pro Biometric Authentication API
+    description: >-
+      Biometric authentication and re-verification API enabling face-based
+      login and identity re-confirmation for returning users. Uses liveness
+      detection to prevent spoofing and supports fast ID reusability for
+      streamlined repeat customer onboarding.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://developers.shuftipro.com/docs/biometric_auth/responses/
+    baseURL: https://api.shuftipro.com
+    tags:
+      - Biometrics
+      - Authentication
+      - Liveness Detection
+      - Face Verification
+    properties:
+      - type: Documentation
+        url: https://developers.shuftipro.com/docs/biometric_auth/responses/
+    contact:
+      - FN: Shufti Pro Support
+        url: https://support.shuftipro.com/
+
+common:
+  - type: Website
+    url: https://shuftipro.com/
+  - type: Documentation
+    url: https://developers.shuftipro.com/
+  - type: GitHubOrg
+    url: https://github.com/shuftipro
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/shufti-pro
+  - type: Blog
+    url: https://shuftipro.com/blog/
+  - type: Pricing
+    url: https://shuftipro.com/plans/
+  - type: StatusPage
+    url: https://status.shuftipro.com/
+  - type: X
+    url: https://x.com/shufti_pro
+  - type: Plans
+    url: plans/shufti-pro-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/shufti-pro-rate-limits.yml
+  - type: FinOps
+    url: finops/shufti-pro-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
