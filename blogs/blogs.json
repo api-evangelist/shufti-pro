@@ -1,161 +1,13 @@
 {
-  "provider": "shufti-pro",
-  "blogUrl": "https://shuftipro.com/blog/",
-  "lastFetched": "2026-06-13",
-  "posts": [
-    {
-      "title": "What Is the SDN List? OFAC Designations, Asset Blocking, and Screening Obligations",
-      "url": "https://shuftipro.com/blog/sdn-list-ofac-screening-guide/",
-      "date": "2026-06-12"
-    },
-    {
-      "title": "Best OFAC Screening Software In 2026",
-      "url": "https://shuftipro.com/blog/best-ofac-screening-software/",
-      "date": "2026-06-12"
-    },
-    {
-      "title": "What Is the Difference Between a Positive and a Negative Sanction?",
-      "url": "https://shuftipro.com/blog/positive-vs-negative-sanctions/",
-      "date": "2026-06-12"
-    },
-    {
-      "title": "Best Biometric Verification Providers In 2026",
-      "url": "https://shuftipro.com/blog/best-biometric-verification-providers/",
-      "date": "2026-06-12"
-    },
-    {
-      "title": "What are Cuba Sanctions? What They Cover and Who They Apply To",
-      "url": "https://shuftipro.com/blog/cuba-sanctions/",
-      "date": "2026-06-11"
-    },
-    {
-      "title": "Identity Verification Platform: How It Works and What to Look For",
-      "url": "https://shuftipro.com/blog/identity-verification-platform/",
-      "date": "2026-06-11"
-    },
-    {
-      "title": "HM Treasury Sanctions List: What It Is, Who Must Screen, and What a Breach Costs",
-      "url": "https://shuftipro.com/blog/hm-treasury-sanctions-list-guide/",
-      "date": "2026-06-11"
-    },
-    {
-      "title": "The Ultimate Guide to AML Compliance Programs in 2026",
-      "url": "https://shuftipro.com/blog/aml-compliance-program-guide/",
-      "date": "2026-06-11"
-    },
-    {
-      "title": "Best E-commerce Fraud Prevention Software in 2026",
-      "url": "https://shuftipro.com/blog/best-ecommerce-fraud-prevention-software/",
-      "date": "2026-06-10"
-    },
-    {
-      "title": "How Banks Use AML Screening Software to Detect Financial Crimes?",
-      "url": "https://shuftipro.com/blog/aml-software-for-banks/",
-      "date": "2026-06-10"
-    },
-    {
-      "title": "8 Signs Your Identity Verification Tool Is No Longer Good Enough",
-      "url": "https://shuftipro.com/blog/identity-verification-tool-warning-signs-2/",
-      "date": "2026-06-10"
-    },
-    {
-      "title": "Identity Proofing vs Identity Verification: What They Are, How They Differ, and Why You Need Both",
-      "url": "https://shuftipro.com/blog/identity-proofing-vs-identity-verification/",
-      "date": "2026-06-09"
-    },
-    {
-      "title": "5 Identity Verification Challenges and How to Address Each One",
-      "url": "https://shuftipro.com/blog/identity-verification-challenges/",
-      "date": "2026-06-09"
-    },
-    {
-      "title": "Vendor KYC verification: What it Checks, Why it Matters, and How to Automate it",
-      "url": "https://shuftipro.com/blog/vendor-kyc-verification/",
-      "date": "2026-06-08"
-    },
-    {
-      "title": "Identity Verification Pricing: How Pricing Models Work and What to Look For?",
-      "url": "https://shuftipro.com/blog/identity-verification-pricing-guide/",
-      "date": "2026-06-07"
-    },
-    {
-      "title": "What Sets Top Identity Verification Providers Apart",
-      "url": "https://shuftipro.com/blog/what-sets-top-identity-verification-providers-apart/",
-      "date": "2026-06-06"
-    },
-    {
-      "title": "Identity Verification for Neobanks: Process, Regulation, and What Goes Wrong at Scale",
-      "url": "https://shuftipro.com/blog/identity-verification-for-neobanks/",
-      "date": "2026-06-06"
-    },
-    {
-      "title": "Stop Trusting Identity Verification Accuracy Claims. Start Testing Them",
-      "url": "https://shuftipro.com/blog/identity-verification-accuracy-testing/",
-      "date": "2026-06-04"
-    },
-    {
-      "title": "What Is KYC? Know Your Customer Meaning, Process & Compliance Guide",
-      "url": "https://shuftipro.com/blog/what-is-kyc/",
-      "date": "2026-05-31"
-    },
-    {
-      "title": "Why Artificial Intelligence Isn't Taking Over\u2014It's Helping Us Thrive",
-      "url": "https://shuftipro.com/blog/why-artificial-intelligence-is-not-taking-over-its-helping-us-thrive/",
-      "date": "2025-05-29"
-    },
-    {
-      "title": "What are the 3 Stages of Money Laundering and How Can AML Checks Combat Fraud?",
-      "url": "https://shuftipro.com/blog/what-are-the-3-stages-of-money-laundering-and-how-can-aml-checks-combat-fraud/",
-      "date": "2025-05-22"
-    },
-    {
-      "title": "Fighting Financial Crime: Why KYC and AML Compliance Is Essential for the Global Finance Sector",
-      "url": "https://shuftipro.com/blog/fighting-financial-crime-why-kyc-and-aml-compliance-is-essential-for-the-global-finance-sector/",
-      "date": "2025-04-25"
-    },
-    {
-      "title": "Biometric Authentication: Applications and Constraints",
-      "url": "https://shuftipro.com/blog/biometric-authentication-its-applications-and-associated-constraints/",
-      "date": "2019-07-19"
-    },
-    {
-      "title": "ID Verification API \u2013 Smooth Integration With Online Systems",
-      "url": "https://shuftipro.com/blog/how-identity-verification-api-can-transform-financial-services/",
-      "date": "2019-06-22"
-    },
-    {
-      "title": "AML Technology Eradicating the Perils of Money Laundering",
-      "url": "https://shuftipro.com/blog/aml-technology-eradicating-the-perils-of-money-laundering/",
-      "date": "2019-11-08"
-    },
-    {
-      "title": "Customer Due Diligence: From KYC to KYB",
-      "url": "https://shuftipro.com/blog/customer-due-diligence-from-kyc-to-kyb/",
-      "date": "2019-11-06"
-    },
-    {
-      "title": "Know Your Business: The Next Step in Identity Verification",
-      "url": "https://shuftipro.com/blog/know-your-business-the-next-step-in-identity-verification/",
-      "date": "2019-10-28"
-    },
-    {
-      "title": "RegTech: The Case for Financial Inclusion",
-      "url": "https://shuftipro.com/blog/regtech-the-case-for-financial-inclusion/",
-      "date": "2020-10-10"
-    },
-    {
-      "title": "How does CDD effectively help with AML Compliance?",
-      "url": "https://shuftipro.com/blog/cdd-effectively-help-aml-compliance/",
-      "date": "2020-09-16"
-    },
-    {
-      "title": "AI a Blessing \u2013 AML compliance cost reduced by $217 billion",
-      "url": "https://shuftipro.com/blog/artificial-intelligence-can-reduce-cost-of-aml-compliance-by-217-billion/",
-      "date": "2019-02-26"
-    }
-  ],
   "repo": "shufti-pro",
   "feeds": [
+    {
+      "source": "https://shuftipro.com/blog/feed/",
+      "feed_url": "https://shuftipro.com/blog/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
     {
       "source": "https://www.linkedin.com/company/shufti-pro",
       "feed_url": "https://www.linkedin.com/company/shufti-pro",
@@ -164,6 +16,6 @@
       "method": "none"
     }
   ],
-  "post_count": 0,
-  "fetched": "2026-06-14T20:42:17Z"
+  "fetched": "2026-06-27T12:03:07Z",
+  "post_count": 10
 }
