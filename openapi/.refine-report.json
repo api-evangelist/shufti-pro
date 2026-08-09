@@ -1,0 +1,16 @@
+{
+  "provider": "shuftipro",
+  "sources": [
+    "shuftipro-status-api-openapi.yml",
+    "shuftipro-verification-api-openapi.yml"
+  ],
+  "outputs": [
+    "shuftipro-status-api-openapi.yml",
+    "shuftipro-verification-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
