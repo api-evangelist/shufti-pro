@@ -1,0 +1,196 @@
+{
+  "item": [
+    {
+      "id": "1b886322-a087-4084-89c5-3747fcdb3118",
+      "name": "Verification",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e202b0f0-33c4-40d7-b043-f972013bd573",
+          "name": "Create a verification request.",
+          "request": {
+            "name": "Create a verification request.",
+            "description": {
+              "content": "Submits a verification request containing a unique reference, an optional callback_url, and one or more service objects (document, face, address, consent, background_checks, kyb). In offsite mode with show_results set to \"0\" the request returns request.pending and final results are delivered asynchronously to the callback_url.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{basicAuthUsername}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{basicAuthPassword}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"reference\": \"<string>\",\n  \"callback_url\": \"<uri>\",\n  \"email\": \"<email>\",\n  \"country\": \"<string>\",\n  \"language\": \"<string>\",\n  \"verification_mode\": \"<string>\",\n  \"show_results\": \"<string>\",\n  \"allow_retry\": \"<string>\",\n  \"ttl\": \"<integer>\",\n  \"document\": {\n    \"proof\": \"<string>\",\n    \"supported_types\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"name\": {\n      \"first_name\": \"<string>\",\n      \"middle_name\": \"<string>\",\n      \"last_name\": \"<string>\",\n      \"fuzzy_match\": \"<string>\"\n    },\n    \"dob\": \"<date>\",\n    \"document_number\": \"<string>\",\n    \"issue_date\": \"<date>\",\n    \"expiry_date\": \"<date>\"\n  },\n  \"face\": {\n    \"proof\": \"<string>\"\n  },\n  \"address\": {\n    \"proof\": \"<string>\",\n    \"full_address\": \"<string>\",\n    \"name\": {\n      \"first_name\": \"<string>\",\n      \"middle_name\": \"<string>\",\n      \"last_name\": \"<string>\",\n      \"fuzzy_match\": \"<string>\"\n    },\n    \"supported_types\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"consent\": {\n    \"proof\": \"<string>\",\n    \"text\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"supported_types\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"background_checks\": {\n    \"name\": {\n      \"first_name\": \"<string>\",\n      \"middle_name\": \"<string>\",\n      \"last_name\": \"<string>\",\n      \"fuzzy_match\": \"<string>\"\n    },\n    \"dob\": \"<date>\",\n    \"alias_search\": \"<string>\",\n    \"filters\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"kyb\": {\n    \"company_name\": \"<string>\",\n    \"company_jurisdiction_code\": \"<string>\",\n    \"company_registration_number\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "56be5297-1734-474f-af69-43d5f0c8af20",
+              "name": "Verification response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"reference\": \"17374217\",\n  \"callback_url\": \"<uri>\",\n  \"email\": \"<email>\",\n  \"country\": \"US\",\n  \"language\": \"<string>\",\n  \"verification_mode\": \"<string>\",\n  \"show_results\": \"<string>\",\n  \"allow_retry\": \"<string>\",\n  \"ttl\": \"<integer>\",\n  \"document\": {\n    \"proof\": \"<string>\",\n    \"supported_types\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"name\": {\n      \"first_name\": \"<string>\",\n      \"middle_name\": \"<string>\",\n      \"last_name\": \"<string>\",\n      \"fuzzy_match\": \"<string>\"\n    },\n    \"dob\": \"<date>\",\n    \"document_number\": \"<string>\",\n    \"issue_date\": \"<date>\",\n    \"expiry_date\": \"<date>\"\n  },\n  \"face\": {\n    \"proof\": \"<string>\"\n  },\n  \"address\": {\n    \"proof\": \"<string>\",\n    \"full_address\": \"<string>\",\n    \"name\": {\n      \"first_name\": \"<string>\",\n      \"middle_name\": \"<string>\",\n      \"last_name\": \"<string>\",\n      \"fuzzy_match\": \"<string>\"\n    },\n    \"supported_types\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"consent\": {\n    \"proof\": \"<string>\",\n    \"text\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"supported_types\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"background_checks\": {\n    \"name\": {\n      \"first_name\": \"<string>\",\n      \"middle_name\": \"<string>\",\n      \"last_name\": \"<string>\",\n      \"fuzzy_match\": \"<string>\"\n    },\n    \"dob\": \"<date>\",\n    \"alias_search\": \"<string>\",\n    \"filters\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"kyb\": {\n    \"company_name\": \"<string>\",\n    \"company_jurisdiction_code\": \"<string>\",\n    \"company_registration_number\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "SHA256 signature of the response body for validation.",
+                  "key": "Signature",
+                  "value": "string"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"reference\": \"17374217\",\n  \"event\": \"verification.declined\",\n  \"email\": \"string\",\n  \"country\": \"string\",\n  \"verification_url\": \"https://RrhcnXnzdhclPCUsodBZkrttOOLKc.oxxyE5d,MZI8neW.+M+cQFDvGvj7r11dHFJ\",\n  \"verification_result\": {\n    \"key_0\": 3384,\n    \"key_1\": 611\n  },\n  \"verification_data\": {\n    \"key_0\": \"string\"\n  },\n  \"declined_reason\": \"string\",\n  \"declined_codes\": [\n    \"string\",\n    \"string\"\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "782989b6-e60b-4a6d-bd6e-2e1b7a44e6cb",
+              "name": "Unauthorised - invalid credentials.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"reference\": \"17374217\",\n  \"callback_url\": \"<uri>\",\n  \"email\": \"<email>\",\n  \"country\": \"US\",\n  \"language\": \"<string>\",\n  \"verification_mode\": \"<string>\",\n  \"show_results\": \"<string>\",\n  \"allow_retry\": \"<string>\",\n  \"ttl\": \"<integer>\",\n  \"document\": {\n    \"proof\": \"<string>\",\n    \"supported_types\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"name\": {\n      \"first_name\": \"<string>\",\n      \"middle_name\": \"<string>\",\n      \"last_name\": \"<string>\",\n      \"fuzzy_match\": \"<string>\"\n    },\n    \"dob\": \"<date>\",\n    \"document_number\": \"<string>\",\n    \"issue_date\": \"<date>\",\n    \"expiry_date\": \"<date>\"\n  },\n  \"face\": {\n    \"proof\": \"<string>\"\n  },\n  \"address\": {\n    \"proof\": \"<string>\",\n    \"full_address\": \"<string>\",\n    \"name\": {\n      \"first_name\": \"<string>\",\n      \"middle_name\": \"<string>\",\n      \"last_name\": \"<string>\",\n      \"fuzzy_match\": \"<string>\"\n    },\n    \"supported_types\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"consent\": {\n    \"proof\": \"<string>\",\n    \"text\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"supported_types\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"background_checks\": {\n    \"name\": {\n      \"first_name\": \"<string>\",\n      \"middle_name\": \"<string>\",\n      \"last_name\": \"<string>\",\n      \"fuzzy_match\": \"<string>\"\n    },\n    \"dob\": \"<date>\",\n    \"alias_search\": \"<string>\",\n    \"filters\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"kyb\": {\n    \"company_name\": \"<string>\",\n    \"company_jurisdiction_code\": \"<string>\",\n    \"company_registration_number\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.shuftipro.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "189e6bf2-f7a0-459d-a537-51e218ba7089",
+    "name": "Shufti Pro Status Verification API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Specification of the Shufti Pro identity-verification API. A single REST endpoint accepts a verification request containing one or more service objects - document, face, address, consent, background_checks, and kyb - to run KYC, KYB, and AML compliance across 240+ countries and territories. Companion endpoints retrieve verification status and proofs and delete verification data. Requests authorize via HTTP Basic Auth (Client ID as username, Secret Key as password) or a short-lived Bearer access token.\n\nContact Support:\n Name: Shufti Pro Support",
+      "type": "text/plain"
+    }
+  }
+}

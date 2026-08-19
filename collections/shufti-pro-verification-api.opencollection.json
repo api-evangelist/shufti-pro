@@ -1,0 +1,38 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Shufti Pro Status Verification API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Verification",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a verification request.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.shuftipro.com/",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "Submits a verification request containing a unique reference, an optional callback_url, and one or more service objects (document, face, address, consent, background_checks, kyb). In offsite mode with show_results set to \"0\" the request returns request.pending and final results are delivered asynchronously to the callback_url."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

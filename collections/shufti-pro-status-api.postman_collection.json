@@ -1,0 +1,254 @@
+{
+  "item": [
+    {
+      "id": "2ddb862f-6887-4cea-bf79-f78f6478a848",
+      "name": "Status",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "77d06fde-436a-482c-b2a5-3d54c9a83c0d",
+          "name": "Get verification status and proofs.",
+          "request": {
+            "name": "Get verification status and proofs.",
+            "description": {
+              "content": "Retrieves the current status, event, and proof URLs for a previously submitted verification by posting its reference.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "status"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{basicAuthUsername}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{basicAuthPassword}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"reference\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "c19182da-ba98-43e4-a7fa-aa1401ec95b2",
+              "name": "Status response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "status"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"reference\": \"17374217\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"reference\": \"17374217\",\n  \"event\": \"request.invalid\",\n  \"email\": \"string\",\n  \"country\": \"string\",\n  \"verification_url\": \"http://FfhIwWZmAbGLAllamoKYUUqIJYSBFIl.tmnfy4hAIFyBex+rBr9F6s9cWQpnp1O5t,s\",\n  \"verification_result\": {\n    \"key_0\": 8469\n  },\n  \"verification_data\": {\n    \"key_0\": 177.06826394406016,\n    \"key_1\": 4498\n  },\n  \"declined_reason\": \"string\",\n  \"declined_codes\": [\n    \"string\",\n    \"string\"\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e37a59ac-39df-4b6c-a882-c109b493915b",
+          "name": "Delete verification data.",
+          "request": {
+            "name": "Delete verification data.",
+            "description": {
+              "content": "Deletes the stored verification data for a completed request by reference. Returns request.deleted on success or request.invalid if the reference is unknown or already deleted.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "delete"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{basicAuthUsername}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{basicAuthPassword}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"reference\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "23eb99aa-9fba-4fea-8686-a1a0655b7e06",
+              "name": "Delete response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "delete"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"reference\": \"17374217\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"reference\": \"17374217\",\n  \"event\": \"request.deleted\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.shuftipro.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "6d7dabd3-740a-458f-9d55-749f1431347f",
+    "name": "Shufti Pro Verification Status API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Specification of the Shufti Pro identity-verification API. A single REST endpoint accepts a verification request containing one or more service objects - document, face, address, consent, background_checks, and kyb - to run KYC, KYB, and AML compliance across 240+ countries and territories. Companion endpoints retrieve verification status and proofs and delete verification data. Requests authorize via HTTP Basic Auth (Client ID as username, Secret Key as password) or a short-lived Bearer access token.\n\nContact Support:\n Name: Shufti Pro Support",
+      "type": "text/plain"
+    }
+  }
+}

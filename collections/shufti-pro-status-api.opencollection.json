@@ -1,0 +1,58 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Shufti Pro Verification Status API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Status",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get verification status and proofs.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.shuftipro.com/status",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "Retrieves the current status, event, and proof URLs for a previously submitted verification by posting its reference."
+        },
+        {
+          "info": {
+            "name": "Delete verification data.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.shuftipro.com/delete",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "Deletes the stored verification data for a completed request by reference. Returns request.deleted on success or request.invalid if the reference is unknown or already deleted."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
