@@ -5,6 +5,18 @@ description: Shufti Pro is an AI-powered identity verification platform offering
   The platform supports 10,000+ document types across 230+ countries and territories, integrates with
   1700+ AML watchlists, and provides mobile SDKs for Android, iOS, Flutter, and React Native.
 type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
