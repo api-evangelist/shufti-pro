@@ -1,0 +1,32 @@
+# Front Door AI Index — shufti-pro — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: shufti-pro
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: shuftipro.com
+  final_host: shuftipro.com
+  ownership: own
+  owner: shufti-pro
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 26
+  host_score: 26
+  density: 8.16
+  words: 3187
+  tiers:
+    agentic: 9
+    core: 14
+    model: 3
+  ambiguous: 10
+  top_terms:
+    AI: 14
+    intelligence: 6
+    MCP: 5
+    Claude: 3
+    agent: 3
+    agentic: 2
+    copilot: 2
+    smart: 1

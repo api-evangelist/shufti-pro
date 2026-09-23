@@ -1,0 +1,1 @@
+{"resource":"https://ai.shuftipro.com/mcp","authorization_servers":["https://ai.shuftipro.com"],"scopes_supported":["knowledge:read","verification:read","verification:write"],"bearer_methods_supported":["header"]}

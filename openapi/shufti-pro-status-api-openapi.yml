@@ -1,7 +1,7 @@
-openapi: 3.0.1
+openapi: 3.2.0
 info:
   title: Shufti Pro Verification Status API
-  description: Specification of the Shufti Pro identity-verification API. A single REST endpoint accepts a verification request containing one or more service objects - document, face, address, consent, background_checks, and kyb - to run KYC, KYB, and AML compliance across 240+ countries and territories. Companion endpoints retrieve verification status and proofs and delete verification data. Requests authorize via HTTP Basic Auth (Client ID as username, Secret Key as password) or a short-lived Bearer access token.
+  description: Specification of the Shufti Pro identity-verification API.
   termsOfService: https://shuftipro.com/terms-conditions/
   contact:
     name: Shufti Pro Support
@@ -17,7 +17,7 @@ paths:
       operationId: getVerificationStatus
       tags:
       - Status
-      summary: Get verification status and proofs.
+      summary: Get verification status and proofs
       description: Retrieves the current status, event, and proof URLs for a previously submitted verification by posting its reference.
       security:
       - basicAuth: []
@@ -40,7 +40,7 @@ paths:
       operationId: deleteVerification
       tags:
       - Status
-      summary: Delete verification data.
+      summary: Delete verification data
       description: Deletes the stored verification data for a completed request by reference. Returns request.deleted on success or request.invalid if the reference is unknown or already deleted.
       security:
       - basicAuth: []
@@ -72,6 +72,15 @@ components:
           - request.deleted
           - request.invalid
           example: request.deleted
+    StatusRequest:
+      type: object
+      required:
+      - reference
+      properties:
+        reference:
+          type: string
+          description: Reference of the verification to query or delete.
+          example: '17374217'
     VerificationResponse:
       type: object
       properties:
@@ -114,15 +123,6 @@ components:
           type: array
           items:
             type: string
-    StatusRequest:
-      type: object
-      required:
-      - reference
-      properties:
-        reference:
-          type: string
-          description: Reference of the verification to query or delete.
-          example: '17374217'
   securitySchemes:
     basicAuth:
       type: http
