@@ -60,27 +60,6 @@ paths:
                 $ref: '#/components/schemas/DeleteResponse'
 components:
   schemas:
-    DeleteResponse:
-      type: object
-      properties:
-        reference:
-          type: string
-          example: '17374217'
-        event:
-          type: string
-          enum:
-          - request.deleted
-          - request.invalid
-          example: request.deleted
-    StatusRequest:
-      type: object
-      required:
-      - reference
-      properties:
-        reference:
-          type: string
-          description: Reference of the verification to query or delete.
-          example: '17374217'
     VerificationResponse:
       type: object
       properties:
@@ -123,6 +102,27 @@ components:
           type: array
           items:
             type: string
+    StatusRequest:
+      type: object
+      required:
+      - reference
+      properties:
+        reference:
+          type: string
+          description: Reference of the verification to query or delete.
+          example: '17374217'
+    DeleteResponse:
+      type: object
+      properties:
+        reference:
+          type: string
+          example: '17374217'
+        event:
+          type: string
+          enum:
+          - request.deleted
+          - request.invalid
+          example: request.deleted
   securitySchemes:
     basicAuth:
       type: http
