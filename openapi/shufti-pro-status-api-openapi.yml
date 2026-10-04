@@ -102,15 +102,6 @@ components:
           type: array
           items:
             type: string
-    StatusRequest:
-      type: object
-      required:
-      - reference
-      properties:
-        reference:
-          type: string
-          description: Reference of the verification to query or delete.
-          example: '17374217'
     DeleteResponse:
       type: object
       properties:
@@ -123,6 +114,15 @@ components:
           - request.deleted
           - request.invalid
           example: request.deleted
+    StatusRequest:
+      type: object
+      required:
+      - reference
+      properties:
+        reference:
+          type: string
+          description: Reference of the verification to query or delete.
+          example: '17374217'
   securitySchemes:
     basicAuth:
       type: http
