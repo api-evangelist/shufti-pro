@@ -16,9 +16,49 @@ edges:
   detected: '2026-10-15'
   detected_by: mirror-platform-listings.py
   category: WordPress plugin
+- partner_name: iBeta (ISO/IEC 30107-3 presentation attack detection)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.ibeta.com/iso-30107-3-presentation-attack-detection-confirmation-letters/
+  category: biometric conformance (PAD)
+  contract_reference:
+    register: iBeta ISO/IEC 30107-3 PAD confirmation letters (ibeta.com, NIST NVLAP-accredited lab)
+    standard: ISO/IEC 30107-3 (iBeta PAD)
+    spec_file: null
+    role: ibeta-pad-confirmed
+    registered_name: Shufti Pro
+    register_id: https://www.ibeta.com/wp-content/uploads/2026/05/260427-Shufti-Pro-PAD-Level-3-Confirmation-Letter.pdf
+    matched_domain: shuftipro.com
+    matched_by: domain
+    identity: wikidata Q140224106 'Shufti' P856 https://shuftipro.com
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+    certified_products:
+    - product: ISO/IEC 30107-3 PAD (face)
+      modality: face
+      partner_tier: Level 3
+      lapsed: false
+      latest_letter: '2026-04-24'
+      products_tested:
+      - SDK
+    signal_note: certified_products = ONE entry per PAD product type (modality), highest level confirmed in partner_tier;
+      letters and versions are never counted. iBeta letters carry no expiry, so lapsed is false and the latest letter
+      date is recorded
+    detected_by: sweep-biometrics-testing.py
+    detected: '2026-10-20'
+  detected_by: sweep-biometrics-testing.py
+  first_seen: '2026-10-20'
 generated: '2026-10-15'
 method: searched
 checked:
 - wordpress/integrations/wordpress-integration-edges.yml
+- https://fidoalliance.org/certification/identity-verification/face-verification/fido-certified-products/
+- https://pages.nist.gov/IREX10/
+- https://pages.nist.gov/frvt/html/frvt11.html
+- https://pages.nist.gov/frvt/html/frvt1N.html
+- https://www.ibeta.com/iso-30107-3-presentation-attack-detection-confirmation-letters/
 source:
 - wordpress/integrations/wordpress-integration-edges.yml
